@@ -1,0 +1,26 @@
+<form action="inlined" method="POST" id="inline-form">
+  <div class="field" hx-target="this" hx-swap="outerHTML">
+    <label class="label">First Number</label>
+    <div class="control has-icons-right">
+      <input 
+        class="input" 
+        type="text" 
+        name="first-number" 
+        value="{{ value }}"
+        placeholder="First Number (must be even)"
+        hx-post="inline/first">
+    </div>
+  </div>
+  
+  <div class="field" hx-target="this" hx-swap="outerHTML">
+    <label class="label">Second Number</label>
+    <div class="control has-icons-right">
+      <input 
+        class="input"
+        type="text"
+        name="second-number" 
+        placeholder="Second Number (must be less than 5!)"
+        hx-post="inline/second">
+    </div>
+  </div>
+</form>

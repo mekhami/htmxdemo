@@ -1,0 +1,9 @@
+<form action="forms" method="POST" id="sum-form">
+  {{ form.as_p }}
+</form>
+<button 
+  type="submit" 
+  hx-include="#sum-form"
+  hx-post="forms"
+  hx-target="#sum-form-wrapper"
+  class="button is-success">Add</button>

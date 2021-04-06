@@ -1,0 +1,20 @@
+<div class="modal is-active" id="example-modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Htmx opened a modal!</p>
+      <button 
+        class="delete" 
+        aria-label="close"
+        _="on click remove #example-modal"
+        ></button>
+    </header>
+    <section class="modal-card-body">
+      <p>This modal opens and closes without any state management or javascript!</p>
+      <p>Well, sort of... Let's take a look at the hyperscript.</p>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" _="on click remove #example-modal">Close</button>
+    </footer>
+  </div>
+</div>

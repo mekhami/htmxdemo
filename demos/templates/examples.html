@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% block title %}{% endblock %}
+
+<div class="columns full-height">
+
+  <div class="column is-1" id="next-column">
+    {% block prev %}
+    <div class="level full-height">
+      <span class="icon is-large">
+        <i class="fas fa-chevron-left fa-7x"></i>
+      </span>
+    </div>
+    {% endblock %}
+  </div>
+
+  <div class="column is-5" id="demo-column">
+    <h1 class="title">Demo</h1>
+    {% block demo %}{% endblock %}
+  </div>
+
+  <div class="column is-5" id="code-column">
+    <h1 class="title">Code</h1>
+    {% block code %}{% endblock %}
+  </div>
+
+  <div class="column is-1" id="next-column">
+    {% block next %}
+    <div class="level full-height">
+      <span class="icon is-large">
+        <i class="fas fa-chevron-right fa-7x"></i>
+      </span>
+    </div>
+    {% endblock %}
+  </div>
+
+</div>
+
+{% endblock %}

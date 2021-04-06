@@ -1,0 +1,29 @@
+<div class="field" hx-target="this" hx-swap="outerHTML">
+  <label class="label">Second Number</label>
+  <div class="control has-icons-right">
+    <input 
+      class="input {% if error %}is-danger{% endif %} {% if success %}is-success{% endif %}" 
+      type="text" 
+      name="second-number" 
+      value="{{ value }}"
+      placeholder="Second Number (must be less than 5!)"
+      hx-post="inline/second">
+    {% if success %}
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    {% endif %}
+    {% if error %}
+      <span class="icon is-small is-right">
+        <i class="fas fa-exclamation-triangle"></i>
+      </span>
+    {% endif %}
+  </div>
+  {% if success %}
+    <p class="help is-success">That number checks out!</p>
+  {% endif %}
+
+  {% if error %}
+    <p class="help is-danger">That number isn't less than 5...</p>
+  {% endif %}
+</div>

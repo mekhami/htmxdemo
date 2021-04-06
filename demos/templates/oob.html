@@ -1,0 +1,34 @@
+{% extends "examples.html" %}
+{% load markdownify %}
+
+{% block title %}
+  <h1 class="title">Out of Bounds Swapping</h1>
+{% endblock %}
+
+{% block demo %}
+  {% include "out_of_bounds.html" %}
+{% endblock %}
+
+{% block code %}
+<h2 class="title is-5">Base Template</h2>
+<div class="block">{{ template | markdown | safe }}</div>
+
+<h2 class="title is-5">Response Template</h2>
+<div class="block">{{ response | markdown | safe }}</div>
+
+<h2 class="title is-5">View</h2>
+<div class="block">{{ view | markdown | safe }}</div>
+{% endblock %}
+
+{% block prev %}
+  <a href="polling">
+    {{ block.super }}
+  </a>
+{% endblock %}
+
+{% block next %}
+<a href="miscellany">
+  {{ block.super }}
+</a>
+{% endblock %}
+</div>

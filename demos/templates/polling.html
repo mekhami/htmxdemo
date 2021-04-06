@@ -1,0 +1,34 @@
+{% extends "examples.html" %}
+{% load markdownify %}
+
+{% block title %}
+  <h1 class="title">Polling Long Running Tasks</h1>
+{% endblock %}
+
+{% block demo %}
+  {% include "poller.html" %}
+{% endblock %}
+
+{% block code %}
+<h2 class="title is-5">Progress View</h2>
+<div class="block">{{ progress | markdown | safe }}</div>
+
+<h2 class="title is-5">Initial Template</h2>
+<div class="block">{{ initial | markdown | safe }}</div>
+
+<h2 class="title is-5">Loading Template</h2>
+<div class="block">{{ load | markdown | safe }}</div>
+{% endblock %}
+
+{% block prev %}
+  <a href="modals">
+    {{ block.super }}
+  </a>
+{% endblock %}
+
+{% block next %}
+  <a href="out-of-bounds">
+    {{ block.super }}
+  </a>
+{% endblock %}
+</div>

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load markdownify %}
+{% block content %}
+<div class="container">
+
+  <h1 class="title">Miscellany</h1>
+
+  <section class="content">
+    <p>The most important part of this demo is not the showcase of htmx and what it can do, but rather the productivity that can be gained by getting back to the fundamental principles of the internet.</p>
+    <p>The idea here, which has the potential to change the industry, is <strong>Html-over-the-wire</strong>. That can mean, as in this demo, <strong>Html-over-AJAX</strong>. It can also mean, as in the case of things like Phoenix LiveView, Django-Sockpuppet, or Laravel Livewire, <strong>Html-over-Websocket</strong>, which has a tremendous amount of developer productivity and upside.
+    <p>Rest and HATEOAS haven't gone anywhere, they've just been misused for so long that we have stopped thinking about what they mean and what we gain when we use them correctly.</p>
+    <p>Think about the things that we have left behind in this project:</p>
+    <ol>
+      <li>Writing Javascript</li>
+      <li>Serializing data to JSON</li>
+      <li>Setting up views or frameworks to serve data as JSON</li>
+      <li>Installing hundreds of megabytes or even gigabytes of javascript dependencies for your framework of choice.</li>
+      <li>Webpack, or other complex frontend build systems.</li>
+      <li>Client application versioning, token-based authentication, CORS...</li>
+    </ol>
+    <p>The list goes on and on. We can have our cake and eat it too. We can write modern UX, without the need for the heavy handed complexity of modern front end development.</p>
+    <p>We can also be better citizens of the internet, by not forcing our users to not only download our entire client application, but then also making numerous further requests to fetch the data that the client application needs to saturate itself with.</p>
+    <p>We can stop using our users' battery, cpu cycles, and network bandwidth for the basic things that web servers were designed to do in the first place; rendering HTML and CSS.</p>
+  </section>
+
+  <section class="content">
+    <h3 class="title">A few fun things I used in this project:</h3>
+    <p>The code snippets were generated using a markdown renderer and the python `inspect` standard library.</p>
+    <p>The template snippets were loaded as strings using the django Template object, which could be sent to the markdown renderer.</p>
+    <div class="block">{{ getsource | markdown | safe }}</div>
+    <p>This allowed me to iterate quickly without having to maintain the code fragments in both locations. A fun little challenge.</p>
+  </section>
+
+  <section class="content pb-6">
+    <h3 class="title">Further Reading, Demos, etc.</h3>
+    <h4 class="title">Articles:</h4>
+    <p><a href="https://intercoolerjs.org/2016/01/18/rescuing-rest.html">Rescuing Rest</a> - From the creator of Intercooler/Htmx/Hyperscript, about REST's fall from grace and how it still applies, and can make us all much more productive and consistent.</p>
+    <p><a href="https://intercoolerjs.org/2016/05/08/hatoeas-is-for-humans.html">HATEOAS is for Humans</a> - From the same person, about how HATEOAS is for users with agency, and how it's misinterpreted in the public arena.</p>
+    <p><a href="https://alistapart.com/article/the-future-of-web-software-is-html-over-websockets/">The Future of Web Software is HTML over Websockets</a> - The author dives deep into the productivity benefits of simplifying our technologies without sacrificing modern UX.</p>
+    <h4 class="title">Demos:</h4>
+    <p><a href="https://htmx-notes.herokuapp.com/">Markdown Note Editor</a></p>
+    <p><a href="https://htmx-trello.herokuapp.com/">Trello Board</a></p>
+    <p><a href="https://htmbox.herokuapp.com/">Dropbox Clone</a></p>
+    <p><a href="https://htmx-tabular.herokuapp.com/">Tabular Data</a></p>
+    <p><a href="https://htmx-calendar.herokuapp.com/">Calendar</a></p>
+    <p><a href="https://www.youtube.com/watch?v=MZvmYaFkNJI">Phoenix LiveView Twitter Clone</a> - An excellent demo of Html over Websockets, with the Elixir/Phoenix framework. Extreme productivity!</p>
+  </section>
+
+</div>
+
+{% endblock %}
